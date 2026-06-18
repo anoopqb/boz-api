@@ -1,0 +1,9 @@
+[
+  { "name": "California", "abbreviation": "CA" },
+  { "name": "Texas", "abbreviation": "TX" },
+  { "name": "New York", "abbreviation": "NY" },
+  { "name": "Florida", "abbreviation": "FL" },
+  { "name": "Illinois", "abbreviation": "IL" },
+  { "name": "Washington DC", "abbreviation": "DC" },
+  { "name": "Nevada", "abbreviation": "NV" }
+]

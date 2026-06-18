@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "name": "The Broadstone",
+    "address": "1200 Main St, Los Angeles, CA 90012",
+    "city": "Los Angeles",
+    "state": "California",
+    "minRent": 1850
+  },
+  {
+    "id": 2,
+    "name": "Pinewood Apartments",
+    "address": "450 Pine Ave, San Francisco, CA 94102",
+    "city": "San Francisco",
+    "state": "California",
+    "minRent": 2400
+  },
+  {
+    "id": 3,
+    "name": "Sunset Villas",
+    "address": "789 Sunset Blvd, San Diego, CA 92101",
+    "city": "San Diego",
+    "state": "California",
+    "minRent": 1650
+  },
+  {
+    "id": 4,
+    "name": "The Heights",
+    "address": "300 Oak Dr, Houston, TX 77002",
+    "city": "Houston",
+    "state": "Texas",
+    "minRent": 1200
+  },
+  {
+    "id": 5,
+    "name": "Lone Star Lofts",
+    "address": "500 Congress Ave, Austin, TX 78701",
+    "city": "Austin",
+    "state": "Texas",
+    "minRent": 1450
+  },
+  {
+    "id": 6,
+    "name": "Prairie Creek",
+    "address": "2100 Elm St, Dallas, TX 75201",
+    "city": "Dallas",
+    "state": "Texas",
+    "minRent": 1100
+  },
+  {
+    "id": 7,
+    "name": "Manhattan View",
+    "address": "350 5th Ave, New York, NY 10001",
+    "city": "New York",
+    "state": "New York",
+    "minRent": 3200
+  },
+  {
+    "id": 8,
+    "name": "Brooklyn Commons",
+    "address": "100 Atlantic Ave, Brooklyn, NY 11201",
+    "city": "Brooklyn",
+    "state": "New York",
+    "minRent": 2100
+  },
+  {
+    "id": 9,
+    "name": "Hudson Yards Residence",
+    "address": "510 W 34th St, New York, NY 10001",
+    "city": "New York",
+    "state": "New York",
+    "minRent": 3800
+  },
+  {
+    "id": 10,
+    "name": "Ocean Breeze Condos",
+    "address": "1200 Collins Ave, Miami Beach, FL 33139",
+    "city": "Miami Beach",
+    "state": "Florida",
+    "minRent": 1750
+  },
+  {
+    "id": 11,
+    "name": " Palm Court",
+    "address": "800 Orange Ave, Orlando, FL 32801",
+    "city": "Orlando",
+    "state": "Florida",
+    "minRent": 1350
+  },
+  {
+    "id": 12,
+    "name": "Gulf Shores",
+    "address": "2500 Gulf Blvd, Tampa, FL 33607",
+    "city": "Tampa",
+    "state": "Florida",
+    "minRent": 1500
+  },
+  {
+    "id": 13,
+    "name": "The Lakeshore",
+    "address": "600 N Lake Shore Dr, Chicago, IL 60611",
+    "city": "Chicago",
+    "state": "Illinois",
+    "minRent": 1900
+  },
+  {
+    "id": 14,
+    "name": "Windy City Towers",
+    "address": "200 W Adams St, Chicago, IL 60606",
+    "city": "Chicago",
+    "state": "Illinois",
+    "minRent": 1700
+  },
+  {
+    "id": 15,
+    "name": "Capital Heights",
+    "address": "1400 Pennsylvania Ave NW, Washington, DC 20004",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2200
+  },
+  {
+    "id": 16,
+    "name": "The Ellipse",
+    "address": "500 12th St NW, Washington, DC 20004",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 1950
+  },
+  {
+    "id": 17,
+    "name": "District Suites",
+    "address": "700 H St NW, Washington, DC 20001",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2100
+  },
+  {
+    "id": 18,
+    "name": "Desert Springs",
+    "address": "3000 Las Vegas Blvd S, Las Vegas, NV 89109",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "minRent": 1250
+  },
+  {
+    "id": 19,
+    "name": "Sierra Lofts",
+    "address": "1000 Virginia St, Reno, NV 89502",
+    "city": "Reno",
+    "state": "Nevada",
+    "minRent": 1100
+  },
+  {
+    "id": 20,
+    "name": "Silver State Apartments",
+    "address": "800 E Sahara Ave, Las Vegas, NV 89104",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "minRent": 1350
+  },
+  {
+    "id": 21,
+    "name": "Crystal Tower",
+    "address": "1 Market Plaza, San Francisco, CA 94105",
+    "city": "San Francisco",
+    "state": "California",
+    "minRent": 3100
+  },
+  {
+    "id": 22,
+    "name": "Venice Boardwalk Residences",
+    "address": "2500 Ocean Front Walk, Venice, CA 90291",
+    "city": "Los Angeles",
+    "state": "California",
+    "minRent": 2000
+  },
+  {
+    "id": 23,
+    "name": "Saddleback Ranch",
+    "address": "100 Mission Blvd, San Diego, CA 92108",
+    "city": "San Diego",
+    "state": "California",
+    "minRent": 1750
+  },
+  {
+    "id": 24,
+    "name": "Bay View Lofts",
+    "address": "350 Embarcadero, Oakland, CA 94607",
+    "city": "Oakland",
+    "state": "California",
+    "minRent": 1550
+  },
+  {
+    "id": 25,
+    "name": "Golden Gate Flats",
+    "address": "800 Van Ness Ave, San Francisco, CA 94109",
+    "city": "San Francisco",
+    "state": "California",
+    "minRent": 2600
+  },
+  {
+    "id": 26,
+    "name": "Arroyo Verde",
+    "address": "450 Colorado Blvd, Pasadena, CA 91101",
+    "city": "Pasadena",
+    "state": "California",
+    "minRent": 1650
+  },
+  {
+    "id": 27,
+    "name": "Creekside Village",
+    "address": "1200 Santa Clara St, San Jose, CA 95112",
+    "city": "San Jose",
+    "state": "California",
+    "minRent": 1900
+  },
+  {
+    "id": 28,
+    "name": "Anaheim Gardens",
+    "address": "700 Harbor Blvd, Anaheim, CA 92805",
+    "city": "Anaheim",
+    "state": "California",
+    "minRent": 1400
+  },
+  {
+    "id": 29,
+    "name": "Alamo Heights",
+    "address": "300 River Walk, San Antonio, TX 78205",
+    "city": "San Antonio",
+    "state": "Texas",
+    "minRent": 1050
+  },
+  {
+    "id": 30,
+    "name": "Midtown Place",
+    "address": "1400 Main St, Fort Worth, TX 76102",
+    "city": "Fort Worth",
+    "state": "Texas",
+    "minRent": 1150
+  },
+  {
+    "id": 31,
+    "name": "Bluebonnet Suites",
+    "address": "500 6th St, Austin, TX 78702",
+    "city": "Austin",
+    "state": "Texas",
+    "minRent": 1550
+  },
+  {
+    "id": 32,
+    "name": "Magnolia Court",
+    "address": "2400 Commerce St, Dallas, TX 75226",
+    "city": "Dallas",
+    "state": "Texas",
+    "minRent": 1300
+  },
+  {
+    "id": 33,
+    "name": "Space City Lofts",
+    "address": "1600 NASA Pkwy, Houston, TX 77058",
+    "city": "Houston",
+    "state": "Texas",
+    "minRent": 1250
+  },
+  {
+    "id": 34,
+    "name": "Mesquite Ridge",
+    "address": "2000 Main Blvd, Plano, TX 75023",
+    "city": "Plano",
+    "state": "Texas",
+    "minRent": 1350
+  },
+  {
+    "id": 35,
+    "name": "Cedar Park Villas",
+    "address": "600 Bell Blvd, Cedar Park, TX 78613",
+    "city": "Cedar Park",
+    "state": "Texas",
+    "minRent": 1200
+  },
+  {
+    "id": 36,
+    "name": "Hill Country Residences",
+    "address": "400 Congress Ave, Round Rock, TX 78664",
+    "city": "Round Rock",
+    "state": "Texas",
+    "minRent": 1100
+  },
+  {
+    "id": 37,
+    "name": "Astoria Place",
+    "address": "2800 23rd Ave, Astoria, NY 11105",
+    "city": "New York",
+    "state": "New York",
+    "minRent": 2400
+  },
+  {
+    "id": 38,
+    "name": "Central Park North",
+    "address": "140 W 110th St, New York, NY 10026",
+    "city": "New York",
+    "state": "New York",
+    "minRent": 2900
+  },
+  {
+    "id": 39,
+    "name": "Williamsburg Flats",
+    "address": "200 Bedford Ave, Brooklyn, NY 11211",
+    "city": "Brooklyn",
+    "state": "New York",
+    "minRent": 2300
+  },
+  {
+    "id": 40,
+    "name": "Rochester Heights",
+    "address": "100 East Ave, Rochester, NY 14604",
+    "city": "Rochester",
+    "state": "New York",
+    "minRent": 950
+  },
+  {
+    "id": 41,
+    "name": "Niagara View",
+    "address": "300 Niagara St, Buffalo, NY 14201",
+    "city": "Buffalo",
+    "state": "New York",
+    "minRent": 850
+  },
+  {
+    "id": 42,
+    "name": "Long Island Sound",
+    "address": "700 Sunrise Hwy, Hempstead, NY 11550",
+    "city": "Hempstead",
+    "state": "New York",
+    "minRent": 1600
+  },
+  {
+    "id": 43,
+    "name": "Port Washington Place",
+    "address": "200 Shore Rd, Port Washington, NY 11050",
+    "city": "Port Washington",
+    "state": "New York",
+    "minRent": 2100
+  },
+  {
+    "id": 44,
+    "name": "Flagler Shores",
+    "address": "500 Flagler Dr, West Palm Beach, FL 33401",
+    "city": "West Palm Beach",
+    "state": "Florida",
+    "minRent": 1600
+  },
+  {
+    "id": 45,
+    "name": "Sunshine Towers",
+    "address": "100 SE 2nd St, Fort Lauderdale, FL 33301",
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "minRent": 1700
+  },
+  {
+    "id": 46,
+    "name": "Jacksonville Landing",
+    "address": "400 Independent Dr, Jacksonville, FL 32202",
+    "city": "Jacksonville",
+    "state": "Florida",
+    "minRent": 1300
+  },
+  {
+    "id": 47,
+    "name": "Coral Gables Estates",
+    "address": "100 Miracle Mile, Coral Gables, FL 33134",
+    "city": "Coral Gables",
+    "state": "Florida",
+    "minRent": 2200
+  },
+  {
+    "id": 48,
+    "name": "Bayshore Gardens",
+    "address": "600 Bayshore Blvd, Tampa, FL 33606",
+    "city": "Tampa",
+    "state": "Florida",
+    "minRent": 1650
+  },
+  {
+    "id": 49,
+    "name": "Key West Villas",
+    "address": "100 Duval St, Key West, FL 33040",
+    "city": "Key West",
+    "state": "Florida",
+    "minRent": 2500
+  },
+  {
+    "id": 50,
+    "name": "Eatonville Flats",
+    "address": "300 Kennedy Blvd, Tallahassee, FL 32301",
+    "city": "Tallahassee",
+    "state": "Florida",
+    "minRent": 1100
+  },
+  {
+    "id": 51,
+    "name": "Navy Pier Residences",
+    "address": "700 E Grand Ave, Chicago, IL 60611",
+    "city": "Chicago",
+    "state": "Illinois",
+    "minRent": 2200
+  },
+  {
+    "id": 52,
+    "name": "Prairie View Apartments",
+    "address": "200 N Main St, Naperville, IL 60540",
+    "city": "Naperville",
+    "state": "Illinois",
+    "minRent": 1400
+  },
+  {
+    "id": 53,
+    "name": "Wrigley Lofts",
+    "address": "1060 W Addison St, Chicago, IL 60613",
+    "city": "Chicago",
+    "state": "Illinois",
+    "minRent": 1850
+  },
+  {
+    "id": 54,
+    "name": "Lincoln Park Place",
+    "address": "2000 N Clark St, Chicago, IL 60614",
+    "city": "Chicago",
+    "state": "Illinois",
+    "minRent": 2050
+  },
+  {
+    "id": 55,
+    "name": "Peoria Riverfront",
+    "address": "200 Water St, Peoria, IL 61602",
+    "city": "Peoria",
+    "state": "Illinois",
+    "minRent": 900
+  },
+  {
+    "id": 56,
+    "name": "Springfield Commons",
+    "address": "500 S 6th St, Springfield, IL 62701",
+    "city": "Springfield",
+    "state": "Illinois",
+    "minRent": 850
+  },
+  {
+    "id": 57,
+    "name": "Evanston Tower",
+    "address": "1500 Sherman Ave, Evanston, IL 60201",
+    "city": "Evanston",
+    "state": "Illinois",
+    "minRent": 1350
+  },
+  {
+    "id": 58,
+    "name": "DuPont Circle Suites",
+    "address": "1500 Connecticut Ave NW, Washington, DC 20036",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2350
+  },
+  {
+    "id": 59,
+    "name": "Georgetown Manor",
+    "address": "3200 M St NW, Washington, DC 20007",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2500
+  },
+  {
+    "id": 60,
+    "name": "Adams Morgan Flats",
+    "address": "1800 Columbia Rd NW, Washington, DC 20009",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2050
+  },
+  {
+    "id": 61,
+    "name": "National Harbor",
+    "address": "165 Waterfront St, National Harbor, DC 20745",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2150
+  },
+  {
+    "id": 62,
+    "name": "NoMa Residences",
+    "address": "1200 First St NE, Washington, DC 20002",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 1950
+  },
+  {
+    "id": 63,
+    "name": "Capitol Riverfront",
+    "address": "1100 New Jersey Ave SE, Washington, DC 20003",
+    "city": "Washington",
+    "state": "Washington DC",
+    "minRent": 2250
+  },
+  {
+    "id": 64,
+    "name": "Red Rock Canyon View",
+    "address": "2000 W Charleston Blvd, Las Vegas, NV 89102",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "minRent": 1150
+  },
+  {
+    "id": 65,
+    "name": "Tahoe Shores",
+    "address": "100 Lakeside Blvd, Incline Village, NV 89451",
+    "city": "Incline Village",
+    "state": "Nevada",
+    "minRent": 1850
+  },
+  {
+    "id": 66,
+    "name": "Carson Valley Apartments",
+    "address": "300 N Carson St, Carson City, NV 89701",
+    "city": "Carson City",
+    "state": "Nevada",
+    "minRent": 950
+  },
+  {
+    "id": 67,
+    "name": "Sparks Crossing",
+    "address": "500 Pyramid Way, Sparks, NV 89431",
+    "city": "Sparks",
+    "state": "Nevada",
+    "minRent": 1050
+  },
+  {
+    "id": 68,
+    "name": "Henderson Square",
+    "address": "500 S Green Valley Pkwy, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "Nevada",
+    "minRent": 1400
+  },
+  {
+    "id": 69,
+    "name": "Ely Mountain Lodge",
+    "address": "100 Aultman St, Ely, NV 89301",
+    "city": "Ely",
+    "state": "Nevada",
+    "minRent": 800
+  },
+  {
+    "id": 70,
+    "name": "Mesquite Resort Villas",
+    "address": "1000 E Mesquite Blvd, Mesquite, NV 89027",
+    "city": "Mesquite",
+    "state": "Nevada",
+    "minRent": 1100
+  }
+]
