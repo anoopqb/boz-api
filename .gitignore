@@ -10,3 +10,4 @@
 /dist.tar.lzo
 /dist.tar.lz4
 /dist.tar.zst
+.env

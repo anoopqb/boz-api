@@ -1,5 +1,7 @@
+require('dotenv/config');
 const express = require('express');
 const properties = require('./data/properties.json');
+const pexels = require('./services/pexels');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,11 +25,16 @@ app.get('/properties/search', (req, res) => {
     return res.status(404).json({ message: `No properties found for "${location}"` });
   }
 
-  const result = filtered.map((p) => ({
-    name: p.name,
-    address: p.address,
-    minRent: p.minRent,
-  }));
+  const result = filtered.map((p, i) => {
+    const img = pexels.getImageForProperty(p.id);
+    return {
+      name: p.name,
+      address: p.address,
+      minRent: p.minRent,
+      imageUrl: img ? img.url : null,
+      photographer: img ? img.photographer : null,
+    };
+  });
 
   res.json(result);
 });
@@ -35,6 +42,8 @@ app.get('/properties/search', (req, res) => {
 // Healthcheck
 app.get('/', (_req, res) => res.send('boz-api is running'));
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+  console.log('Loading Pexels images...');
+  const ok = await pexels.loadImages();
   console.log(`boz-api listening on http://localhost:${PORT}`);
 });
