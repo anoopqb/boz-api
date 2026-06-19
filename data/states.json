@@ -5,5 +5,6 @@
   { "name": "Florida", "abbreviation": "FL" },
   { "name": "Illinois", "abbreviation": "IL" },
   { "name": "Washington DC", "abbreviation": "DC" },
-  { "name": "Nevada", "abbreviation": "NV" }
+  { "name": "Nevada", "abbreviation": "NV" },
+  { "name": "Virginia", "abbreviation": "VA" }
 ]

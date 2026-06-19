@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "name": " Palm Court",
+    "name": "Palm Court",
     "address": "800 Orange Ave, Orlando, FL 32801",
     "city": "Orlando",
     "state": "Florida",
@@ -113,11 +113,15 @@
   },
   {
     "id": 15,
-    "name": "Capital Heights",
+    "name": "The Harper",
     "address": "1400 Pennsylvania Ave NW, Washington, DC 20004",
     "city": "Washington",
     "state": "Washington DC",
-    "minRent": 2200
+    "minRent": 2200,
+    "luxury": true,
+    "petFriendly": true,
+    "nearMetro": true,
+    "amenities": ["gym", "pool", "parking", "rooftop", "ev-charging", "concierge"]
   },
   {
     "id": 16,
@@ -129,11 +133,14 @@
   },
   {
     "id": 17,
-    "name": "District Suites",
+    "name": "Union Place",
     "address": "700 H St NW, Washington, DC 20001",
     "city": "Washington",
     "state": "Washington DC",
-    "minRent": 2100
+    "minRent": 2100,
+    "petFriendly": true,
+    "nearMetro": true,
+    "amenities": ["gym", "pool", "parking", "dog-park"]
   },
   {
     "id": 18,
@@ -469,7 +476,11 @@
     "address": "3200 M St NW, Washington, DC 20007",
     "city": "Washington",
     "state": "Washington DC",
-    "minRent": 2500
+    "minRent": 2500,
+    "luxury": true,
+    "petFriendly": true,
+    "nearMetro": true,
+    "amenities": ["gym", "pool", "parking", "rooftop", "concierge", "ev-charging"]
   },
   {
     "id": 60,
@@ -558,5 +569,51 @@
     "city": "Mesquite",
     "state": "Nevada",
     "minRent": 1100
+  },
+  {
+    "id": 71,
+    "name": "Rosslyn Heights",
+    "address": "1800 N Moore St, Arlington, VA 22209",
+    "city": "Arlington",
+    "state": "Virginia",
+    "minRent": 2100,
+    "petFriendly": true,
+    "nearMetro": true,
+    "amenities": ["gym", "pool", "parking", "rooftop"]
+  },
+  {
+    "id": 72,
+    "name": "Clarendon Commons",
+    "address": "3000 Washington Blvd, Arlington, VA 22201",
+    "city": "Arlington",
+    "state": "Virginia",
+    "minRent": 1950,
+    "petFriendly": true,
+    "nearMetro": true,
+    "amenities": ["gym", "parking", "dog-park"]
+  },
+  {
+    "id": 73,
+    "name": "Ballston Place",
+    "address": "900 N Taylor St, Arlington, VA 22203",
+    "city": "Arlington",
+    "state": "Virginia",
+    "minRent": 2300,
+    "luxury": true,
+    "petFriendly": false,
+    "nearMetro": true,
+    "amenities": ["gym", "pool", "parking", "concierge", "ev-charging"]
+  },
+  {
+    "id": 74,
+    "name": "Crystal City Residences",
+    "address": "2200 Crystal Dr, Arlington, VA 22202",
+    "city": "Arlington",
+    "state": "Virginia",
+    "minRent": 1850,
+    "petFriendly": true,
+    "nearMetro": true,
+    "newDevelopment": true,
+    "amenities": ["gym", "parking", "business-center", "package-lockers"]
   }
 ]
