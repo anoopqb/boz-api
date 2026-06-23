@@ -1,15 +1,7 @@
 const express = require('express');
 const propertyService = require('../services/propertyService');
-const pexels = require('../services/pexels');
 
 const router = express.Router();
-
-async function ensurePexelsLoaded() {
-  if (!router.pexelsLoaded) {
-    router.pexelsLoaded = true;
-    await pexels.loadImages();
-  }
-}
 
 function getPropertyOr404(id, res) {
   const property = propertyService.findProperty(id);
@@ -30,8 +22,6 @@ router.get('/search', async (req, res) => {
     });
   }
 
-  await ensurePexelsLoaded();
-
   const results = propertyService.findProperties({
     location,
     maxRent,
@@ -50,16 +40,29 @@ router.get('/search', async (req, res) => {
     return res.status(404).json({ message: 'No properties found matching your criteria' });
   }
 
-  const properties = results.map((p) => {
-    const img = pexels.getImageForProperty(p.id);
-    return {
-      ...propertyService.toSearchResult(p),
-      imageUrl: img ? img.url : null,
-      photographer: img ? img.photographer : null,
-    };
-  });
+  const properties = results.map((p) => ({
+    ...propertyService.toSearchResult(p),
+    imageUrl: p.imageUrl ?? null,
+    photographer: p.photographer ?? null,
+  }));
 
   res.json({ count: properties.length, properties });
+});
+
+// semantic_search
+router.get('/semantic-search', async (req, res) => {
+  const { q } = req.query;
+  if (!q) {
+    return res.status(400).json({ error: 'Query (q) is required' });
+  }
+
+  const results = await propertyService.semanticSearch(q);
+
+  if (results.error) {
+    return res.status(500).json({ error: results.error });
+  }
+
+  res.json({ query: q, count: results.length, results });
 });
 
 // compare_properties — must be registered before /:id
@@ -92,12 +95,10 @@ router.get('/:id', async (req, res) => {
     return res.status(404).json({ error: 'Property not found' });
   }
 
-  await ensurePexelsLoaded();
-  const img = pexels.getImageForProperty(property.id);
-
   res.json({
     ...propertyService.getPropertyDetails(property),
-    imageUrl: img ? img.url : null,
+    imageUrl: property.imageUrl ?? null,
+    photographer: property.photographer ?? null,
   });
 });
 
@@ -134,20 +135,15 @@ router.get('/:id/gallery', async (req, res) => {
   const property = getPropertyOr404(req.params.id, res);
   if (!property) return;
 
-  await ensurePexelsLoaded();
-
   const categories = ['exterior', 'lobby', 'kitchen', 'bedroom', 'bathroom', 'pool', 'gym', 'rooftop'];
   const { category } = req.query;
 
-  const images = categories.map((cat, i) => {
-    const img = pexels.getImageForProperty(property.id + i * 3);
-    return {
-      category: cat,
-      url: img ? img.url : null,
-      caption: `${property.name} — ${cat.charAt(0).toUpperCase() + cat.slice(1)}`,
-      photographer: img ? img.photographer : null,
-    };
-  });
+  const images = categories.map((cat) => ({
+    category: cat,
+    url: property.imageUrl ?? null,
+    caption: `${property.name} — ${cat.charAt(0).toUpperCase() + cat.slice(1)}`,
+    photographer: property.photographer ?? null,
+  }));
 
   const filtered = category
     ? images.filter((img) => img.category === category.toLowerCase())

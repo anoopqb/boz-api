@@ -1,4 +1,51 @@
-const rawProperties = require('../data/properties.json');
+const supabase = require('./supabase');
+const pexels = require('./pexels');
+
+let _initialized = false;
+
+async function loadPropertiesFromDb() {
+  if (_initialized) return properties;
+
+  // Load Pexels images into Supabase first
+  await pexels.loadImages();
+
+  const { data, error } = await supabase
+    .from('properties')
+    .select('*')
+    .order('id');
+
+  if (error) {
+    console.error('Failed to load properties from Supabase:', error.message);
+    return [];
+  }
+
+  const raw = (data || []).map((p) => ({
+    id: p.id,
+    name: p.name,
+    address: p.address,
+    city: p.city,
+    state: p.state,
+    minRent: p.min_rent,
+    luxury: p.luxury ?? undefined,
+    petFriendly: p.pet_friendly ?? undefined,
+    nearMetro: p.near_metro ?? undefined,
+    newDevelopment: p.new_development ?? undefined,
+    amenities: p.amenities ?? undefined,
+    imageUrl: p.image_url ?? undefined,
+    photographer: p.photographer ?? undefined,
+    searchText: p.search_text ?? undefined,
+  }));
+
+  _initialized = true;
+  return raw;
+}
+
+// Start loading eagerly on module load
+const ready = loadPropertiesFromDb().then((raw) => {
+  properties.length = 0;
+  properties.push(...raw.map(enrichProperty));
+  console.log(`Loaded ${properties.length} properties from Supabase`);
+});
 
 const AMENITY_POOL = [
   'gym',
@@ -101,7 +148,7 @@ function enrichProperty(property) {
   };
 }
 
-const properties = rawProperties.map(enrichProperty);
+const properties = [];
 
 function findProperty(id) {
   const numericId = Number(id);
@@ -371,6 +418,9 @@ function getPropertyDetails(property) {
       bedsAvailable: [...new Set(floorplans.map((fp) => fp.beds))].sort(),
     },
     contact: property.contact,
+    imageUrl: property.imageUrl ?? null,
+    photographer: property.photographer ?? null,
+    searchText: property.searchText ?? null,
   };
 }
 
@@ -472,13 +522,41 @@ function toSearchResult(property) {
     nearMetro: property.nearMetro,
     metroStation: property.metroStation,
     amenities: property.amenities,
+    imageUrl: property.imageUrl ?? null,
+    photographer: property.photographer ?? null,
   };
+}
+
+async function semanticSearch(query) {
+  const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
+
+  const res = await fetch(`${OLLAMA_URL}/api/embeddings`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model: 'nomic-embed-text:v1.5', prompt: query }),
+  });
+  const { embedding } = await res.json();
+
+  const { data, error } = await supabase.rpc('match_properties', {
+    query_embedding: embedding,
+    match_threshold: 0.5,
+    match_count: 10,
+  });
+
+  if (error) return { error: error.message };
+
+  return (data || []).map((m) => {
+    const p = findProperty(m.id);
+    return p ? { ...toSearchResult(p), similarity: m.similarity, searchText: m.search_text } : null;
+  }).filter(Boolean);
 }
 
 module.exports = {
   properties,
+  ready,
   findProperty,
   findProperties,
+  semanticSearch,
   getPropertyDetails,
   getFloorplans,
   getAvailableUnits,
